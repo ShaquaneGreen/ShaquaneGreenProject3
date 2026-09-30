@@ -1,12 +1,18 @@
 from nicegui import ui
 
-first_label = ui.label("Hello Comp151")
+everything_to_draw = [
+
+#This is putting a label above my drawing.
+first_label = ui.Label("Shaquane's King Of The Court")
 first_label.classes("text-pink-400")
 first_label.style("font-size: 200%")
-drawing_area = ui.interactive_image(size=(1000, 1000), cross = False, sanitize= True)
+
+#This creates the interactive image where my picture will be drawn.
+drawing_area = ui.interactive_image(size=(1000, 1000), cross=False, sanitize=True)
+
+#This gives the background a color.
 drawing_area.classes("w-lg bg-green-300")
-drawing_area.set_content('''<circle cx="500" cy= "500" r= "75" fill="orange" /> ''')
+
+backboard = '''<rect x="750" y="150" width="180" height="20" fill="white" stroke="black" stroke-width="5" />'''
 
 
-
-ui.run()
